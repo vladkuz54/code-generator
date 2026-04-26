@@ -10,4 +10,5 @@ dependencies = [
     "isort>=8.0.1",
     "langchain>=1.2.15",
     "langchain-openai>=1.2.1",
+    "streamlit>=1.56.0",
 ]
