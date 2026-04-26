@@ -27,7 +27,7 @@ Entry Point: Provide a main execution block or a standard entry point to demonst
 prompt = ChatPromptTemplate(
     [
         ("system", system),
-        ("human", "Rewritten task:\n{architect_task}\n\nCode:"),
+        ("human", "Architectural Breakdown:\n{architect_task}\n\nCode:"),
     ]
 )
 
