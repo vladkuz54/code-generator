@@ -5,7 +5,7 @@ from chains import tester_chain
 from graph.state import GraphState
 
 
-def coder(state: GraphState) -> Dict[str, Any]:
+def tester(state: GraphState) -> Dict[str, Any]:
     print("---TESTER---")
     query = state["query"]
     coder_output = state["coder_output"]
