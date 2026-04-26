@@ -27,7 +27,7 @@ Implementation Roadmap: A prioritized list of tasks to execute the build from fo
 prompt = ChatPromptTemplate(
     [
         ("system", system),
-        ("humam", "Task:\n{query}\n\nBug report:\n{tester_bug_report}Reqrited task:"),
+        ("humam", "Task:\n{query}\n\nBug report:\n{tester_bug_report}Rewritten task:"),
     ]
 )
 
