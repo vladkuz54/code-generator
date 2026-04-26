@@ -1,7 +1,6 @@
 from typing import Any, Dict
 
-from chains import coder_chain
-
+from graph.chains.coder_chain import coder_chain
 from graph.state import GraphState
 
 
