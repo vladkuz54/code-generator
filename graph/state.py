@@ -16,5 +16,4 @@ class GraphState(TypedDict):
     query: str
     architect_task: str
     coder_output: str
-    tester_grade: bool
     tester_bug_report: str = None
