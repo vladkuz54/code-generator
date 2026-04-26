@@ -1,12 +1,12 @@
 from dotenv import load_dotenv
 from langgraph.graph import END, StateGraph
 
+load_dotenv()
+
 from graph.chains.code_grader_chain import code_grader_chain
 from graph.consts import ARCHITECT, CODER, TESTER
 from graph.nodes import architect, coder, tester
 from graph.state import GraphState
-
-load_dotenv()
 
 
 def decide_to_transform(state: GraphState) -> str:
@@ -18,7 +18,7 @@ def decide_to_transform(state: GraphState) -> str:
         {"query": query, "coder_output": coder_output}
     )
 
-    if not grader_output.tester_grade:
+    if not grader_output.code_grader:
         return TESTER
     else:
         return END
@@ -32,7 +32,6 @@ workflow.add_node(TESTER, tester)
 
 workflow.set_entry_point(ARCHITECT)
 workflow.add_edge(ARCHITECT, CODER)
-# workflow.add_edge(CODER, TESTER)
 
 workflow.add_conditional_edges(
     CODER, decide_to_transform, path_map={TESTER: TESTER, END: END}
