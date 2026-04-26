@@ -31,4 +31,4 @@ prompt = ChatPromptTemplate(
     ]
 )
 
-architect_chain = prompt | llm | StrOutputParser()
+coder_chain = prompt | llm | StrOutputParser()
